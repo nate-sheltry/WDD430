@@ -10,7 +10,7 @@ export function NewTodoForm({ onSubmit }){
         onSubmit(newItem)
         setNewItem('')
     
-    }
+    } 
     
     return (
         <form onSubmit={handleSubmit} className='new-item-form'>
