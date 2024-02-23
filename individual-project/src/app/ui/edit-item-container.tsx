@@ -34,7 +34,6 @@ export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Bo
   }, [isLoading, loadingText])
 
   useEffect(() => {
-    router.refresh()
     if(ammo){
       fetch(`/api/resources/ammo/${itemId}/${avoidCaching()}`, {cache: 'no-store', next: {revalidate: 0}}).then((res)=>res.json()).then((data)=>{
         let processedData = data;

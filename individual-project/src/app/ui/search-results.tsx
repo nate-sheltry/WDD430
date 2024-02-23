@@ -23,7 +23,6 @@ export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
   const [category, setCategory] = useState(null)
 
   useEffect(() => {
-    router.refresh()
     if(ammo){
       fetch(`/api/resources/ammo/all/${avoidCaching()}`, {cache: 'no-store', next: {revalidate: 0}}).then((res)=>res.json()).then((data)=>{
         let processedData = data;
@@ -51,7 +50,6 @@ export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
   }, [])
 
   useEffect(() => {
-    router.refresh()
     let processedData;
     if(ammo){
       if(category != null || searchValue != ''){
