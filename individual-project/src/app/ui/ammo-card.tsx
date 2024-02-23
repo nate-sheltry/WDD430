@@ -23,6 +23,7 @@ export function AmmoCard({ammoObj}:{ammoObj:incomingAmmo}) {
 
   function handleEditAmmo(){
     router.push(`/database-modifications/ammo/${ammoObj._id}/`)
+    router.refresh();
   }
 
   return (

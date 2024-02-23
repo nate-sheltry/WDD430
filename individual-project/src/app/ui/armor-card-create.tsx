@@ -131,6 +131,7 @@ export function ArmorCardCreate() {
       }
     }).then(data => {
       router.push(`/database-modifications/armor/${data.insertedId}/`)
+      router.refresh();
     })
   }
 

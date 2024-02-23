@@ -92,6 +92,7 @@ export function AmmoCardCreate() {
       }
     }).then(data => {
       router.push(`/database-modifications/ammo/${data.insertedId}/${avoidCaching()}`)
+      router.refresh();
     })
   }
 

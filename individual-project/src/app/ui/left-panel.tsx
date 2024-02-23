@@ -18,19 +18,24 @@ export function LeftPanel() {
   };
   const handleHomeButtonClick = () =>{
     router.push('/')
+    router.refresh();
   }
 
   const handleAmmoButtonClick = () => {
     router.push('/search/ammo')
+    router.refresh();
   };
   const handleArmorButtonClick = () => {
     router.push('/search/armor')
+    router.refresh();
   };
   const handleAmmoCreateClick = () => {
     router.push('/database-modifications/ammo/create/')
+    router.refresh();
   };
   const handleArmorCreateClick = () => {
     router.push('/database-modifications/armor/create/')
+    router.refresh();
   };
 
   return (

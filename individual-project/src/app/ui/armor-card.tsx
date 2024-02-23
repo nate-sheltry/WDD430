@@ -14,6 +14,7 @@ export function ArmorCard({armorObj}:{armorObj:incomingArmor}) {
   };
   function handleEditArmor(){
     router.push(`/database-modifications/armor/${armorObj._id}/`)
+    router.refresh();
   }
 
   return (
