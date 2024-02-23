@@ -8,6 +8,7 @@ import { SearchHeader } from "./search-header";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { filterAmmo, filterArmor } from "../lib/actions";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
   const [Data, setData] = useState([])
@@ -18,7 +19,7 @@ export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
 
   useEffect(() => {
     if(ammo){
-      fetch(`/api/resources/ammo/all/`).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/ammo/all/${avoidCaching()}`).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         if(searchValue != ''){
           processedData = filterAmmo(data, searchValue, category)
@@ -28,7 +29,7 @@ export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
         setLoading(false)})
     }
     else if(armor){
-      fetch(`/api/resources/armor/all/`).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/armor/all/${avoidCaching()}`).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         if(searchValue != ''){
           processedData = filterArmor(data, searchValue)

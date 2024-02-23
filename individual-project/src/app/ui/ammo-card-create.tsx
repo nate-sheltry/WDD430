@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AmmoCategory, incomingAmmo, outgoingAmmo } from "@/app/lib/definitions"
 import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function AmmoCardCreate() {
 
@@ -68,7 +69,7 @@ export function AmmoCardCreate() {
         img:'no-image.png'
       }
     }
-    fetch(`/api/resources/ammo/create/`, {
+    fetch(`/api/resources/ammo/create/${avoidCaching()}`, {
       method: 'POST',
       headers:{
         'Content-type':'application/json'
@@ -84,7 +85,7 @@ export function AmmoCardCreate() {
         })
       }
     }).then(data => {
-      router.push(`/database-modifications/ammo/${data.insertedId}/`)
+      router.push(`/database-modifications/ammo/${data.insertedId}/${avoidCaching()}`)
     })
   }
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { dtdr, incomingArmor, outgoingArmor } from "@/app/lib/definitions"
 import { useRouter } from "next/navigation";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function ArmorCardEdit({armorObj}:{armorObj:incomingArmor}) {
   const router = useRouter()
@@ -107,7 +108,7 @@ export function ArmorCardEdit({armorObj}:{armorObj:incomingArmor}) {
         otherBonuses:otherBonuses
       }
     }
-    fetch(`/api/resources/armor/${armorObj._id}/`, {
+    fetch(`/api/resources/armor/${armorObj._id}/${avoidCaching()}`, {
       method: 'PUT',
       headers:{
         'Content-type':'application/json'

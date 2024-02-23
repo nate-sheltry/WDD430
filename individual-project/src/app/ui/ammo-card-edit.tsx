@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AmmoCategory, incomingAmmo, outgoingAmmo } from "@/app/lib/definitions"
 import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
 
@@ -68,7 +69,7 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
         img:ammoObj.data.img
       }
     }
-    fetch(`/api/resources/ammo/${ammoObj._id}/`, {
+    fetch(`/api/resources/ammo/${ammoObj._id}/${avoidCaching()}`, {
       method: 'PUT',
       headers:{
         'Content-type':'application/json'

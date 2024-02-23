@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { filterAmmo, filterArmor } from "../lib/actions";
 import { AmmoCardEdit } from "./ammo-card-edit";
 import { ArmorCardEdit } from "./armor-card-edit";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Boolean, armor:Boolean}) {
   const [Data, setData] = useState<incomingAmmo[]|incomingArmor[]>([])
@@ -29,14 +30,14 @@ export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Bo
 
   useEffect(() => {
     if(ammo){
-      fetch(`/api/resources/ammo/${itemId}/`).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/ammo/${itemId}/${avoidCaching()}`).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         setData(processedData)
         setFilter(processedData)
         setLoading(false)})
     }
     else if(armor){
-      fetch(`/api/resources/armor/${itemId}/`).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/armor/${itemId}/${avoidCaching()}`).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         setData(processedData)
         setFilter(processedData)

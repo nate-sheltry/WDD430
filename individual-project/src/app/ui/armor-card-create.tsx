@@ -2,6 +2,7 @@ import { useState } from "react";
 import { dtdr, incomingArmor, outgoingArmor } from "@/app/lib/definitions"
 
 import { useRouter } from "next/navigation";
+import { avoidCaching } from "../lib/common/cache-avoid";
 
 export function ArmorCardCreate() {
   const router = useRouter()
@@ -107,7 +108,7 @@ export function ArmorCardCreate() {
         otherBonuses:otherBonuses
       }
     }
-    fetch(`/api/resources/armor/create/`, {
+    fetch(`/api/resources/armor/create/${avoidCaching()}`, {
       method: 'POST',
       headers:{
         'Content-type':'application/json'
