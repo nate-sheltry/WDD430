@@ -2,6 +2,7 @@ import { ObjectId } from "mongodb";
 
 export type AmmoCategory = 'handguns' | 'rifles' | 'big guns' | 'energy weapons' | 'other';
 export type dtdr = {
+    [key:string]: number;
     normal: number;
     fire: number;
     plasma: number;
@@ -52,7 +53,7 @@ export type outgoingArmor = {
 }
 
 
-export type incomignArmor = {
+export type incomingArmor = {
     _id: ObjectId;
     name: string;
     data: {

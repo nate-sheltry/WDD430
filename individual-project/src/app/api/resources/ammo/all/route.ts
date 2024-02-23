@@ -8,5 +8,12 @@ export async function GET(req:Request){
         return Responses(400)
     }
     const results = await getAmmo()
-    return Responses(200, {body: results})
+    console.log('Results from getting ammo')
+    return new Response(JSON.stringify(results),{
+        status:200,
+        statusText:'OK',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
 }

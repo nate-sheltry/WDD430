@@ -1,0 +1,83 @@
+.ammo-card > :is(label, div),
+.ammo-card-edit > :is(label, div), .armor-card > :is(label, div), .armor-card-edit > :is(label, div) {
+    margin:.1rem auto .1rem 0;
+}
+.ammo-card label:not(.name, .categories), .ammo-card-edit label:not(.name, .categories) {
+    width:100%;
+    display:grid;
+    grid-template-columns:25% 75%;
+}
+
+.ammo-card, .ammo-card-edit, .armor-card, .armor-card-edit{
+    display:flex;
+    flex-direction:column;
+    background:var(--secondary-color);
+    border:.2rem solid var(--highlight2-color);
+    outline:.25rem solid var(--primary-color);
+    margin:auto;
+    border-radius:2rem;
+    padding:.75rem;
+}
+
+.ammo-card {
+    width:15rem;
+    height:20rem;
+}
+
+.armor-card{
+    width:19rem;
+    height:25rem;
+}
+.armor-card :not(.otherBonuses) .data-value {
+    text-align:right;
+    padding-right:.5rem;
+}
+.armor-card .data-value, .armor-card-edit .data-value{
+    font-weight:600;
+}
+
+.left-panel-button:hover {
+    background:var(--third-color);
+}
+
+.category {
+    border:.15rem solid var(--primary-color);
+    padding-left:.25rem;
+    padding-right:.25rem;
+    gap:1rem;
+}
+.category:hover{
+    border-color:var(--third-color);
+}
+
+.armor-card-edit .data-value, .ammo-card-edit .data-value {
+    border-radius:.25rem;
+    border: .2rem solid var(--highlight2-color);
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-top:-.1rem;
+    background:rgba(255,255,255,.6);
+}
+
+@media (min-width: 640px) {
+    .sm\:ammo-card-sm{
+        width:20rem;
+        height:20rem;
+    }
+    .sm\:armor-card-sm{
+        width:20rem;
+        height:25rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+
+  }
+  
+  @media (min-width: 1024px) {
+
+  }
+  
+  @media (min-width: 1280px) {
+
+  }
