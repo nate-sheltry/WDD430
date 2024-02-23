@@ -24,7 +24,7 @@ export function SearchHeader({ammo, armor, search, category = null}:{ammo:Boolea
         <input type="text" id="searchBox" className="mt-2 mb-2 pl-1 w-[calc(100%-4rem)] h-5 text-black search-input" value={search.value} onChange={handleInput} ></input>
       </div>
       {ammo && <>
-        <div className="flex flex-wrap max-w-[32rem] ml-4 mr-auto">
+        <div className="flex flex-wrap max-w-[32rem] ml-4 mr-auto sm:gap-2">
           {['handguns', 'rifles', 'energy weapons', 'big guns', 'other'].map((item) => {
             if(category.value == item) return <button data-category={item} key={`${item} active`} onClick={handleClick} className="category rounded-xl text-black bg-[var(--highlight2-color)] font-bold shadow-black shadow-sm ">
             {item}

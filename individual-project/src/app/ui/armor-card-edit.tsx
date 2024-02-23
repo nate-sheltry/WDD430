@@ -107,7 +107,6 @@ export function ArmorCardEdit({armorObj}:{armorObj:incomingArmor}) {
         otherBonuses:otherBonuses
       }
     }
-    console.log(ammo)
     fetch(`/api/resources/armor/${armorObj._id}/`, {
       method: 'PUT',
       headers:{

@@ -13,9 +13,7 @@ export default async function Home() {
 
   return (
     <main className="flex max-h-screen flex-col items-center justify-between p-0 lg:ml-[10%] lg:mr-[10%] ">
-      <div className="decorative-font flex items-center justify-center font-semibold text-[2rem] min-w-full min-h-20 bg-[var(--highlight-color)] border-4 border-[var(--highlight-color)]">
-        Fallout PnP Project
-      </div>
+
       <div className="relative min-w-full max-h-[calc(100vh - 5rem)] top-0 flex-col items-center justify-between p-0 m-0 overflow-hidden sm:grid sm:static mainPageLayout">
         <LeftPanel />
         <div className="h-full w-full overflow-hidden z-0">

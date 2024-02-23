@@ -10,7 +10,6 @@ export async function POST(req:Request){
     }
     const body : outgoingArmor = await req.json();
     if(!validateArmor(body))return Responses(400, {msg:'Object posted does not meet the necessary format.'});
-    console.log(body)
     try{
         const results = await createArmorItem(body)
         return Responses(200, {body: results})

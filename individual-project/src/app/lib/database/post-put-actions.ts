@@ -29,11 +29,9 @@ async function modifyDataPoint(databaseString: string, collectionString:string, 
         const update = {
             $set: data
         }
-        console.log(update)
         const filter = {
             _id: new ObjectId(id)
         }
-        console.log(filter)
         const results = await collection
             .updateOne(filter, update)
         return results;

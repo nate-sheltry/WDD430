@@ -17,7 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <header className="decorative-font flex text-center items-center justify-center font-semibold text-[1.7rem] sm:text-[2rem] min-w-full min-h-20 bg-[var(--highlight-color)] border-4 border-[var(--highlight-color)]">
+        Fallout PnP Project
+      </header>
+        {children}
+        </body>
     </html>
   );
 }

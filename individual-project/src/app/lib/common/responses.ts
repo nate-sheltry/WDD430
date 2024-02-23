@@ -1,6 +1,5 @@
 export function Responses(type:number, {body = {message: ' '}, msg = ' '}:{body?:any,msg?:string} = {}){
     let bodyType :string = JSON.stringify(Object.keys({message: ' '}).sort())
-    console.log('Body'+JSON.stringify(body))
     switch(type){
         case 200:
             if(JSON.stringify(Object.keys(body).sort()) == bodyType){

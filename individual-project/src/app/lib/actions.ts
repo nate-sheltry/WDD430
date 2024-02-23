@@ -7,7 +7,6 @@ export async function filterData(){
 
 export function filterAmmo(data:any, search:string, category:AmmoCategory|null = null){
     let results:any;
-    console.log(category)
     if(category != null){
         if(search != '') {
             results = data.filter((item:incomingAmmo) => {

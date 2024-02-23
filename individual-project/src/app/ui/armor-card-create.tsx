@@ -107,7 +107,6 @@ export function ArmorCardCreate() {
         otherBonuses:otherBonuses
       }
     }
-    console.log(ammo)
     fetch(`/api/resources/armor/create/`, {
       method: 'POST',
       headers:{

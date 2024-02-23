@@ -33,7 +33,6 @@ export async function PUT(req:Request, {params}:{ params: {id: string}}){
     }
     try{
         const body : outgoingAmmo = await req.json();
-        console.log(body)
         if(!validateAmmo(body))return Responses(400, {msg:'Object posted does not meet the necessary format.'});
         const results = await modifyAmmoItem(body, id)
         return Responses(200, {body: results})

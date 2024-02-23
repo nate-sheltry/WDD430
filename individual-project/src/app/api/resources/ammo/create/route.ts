@@ -11,7 +11,6 @@ export async function POST(req:Request){
     }
     const body : outgoingAmmo = await req.json();
     if(!validateAmmo(body))return Responses(400, {msg:'Object posted does not meet the necessary format.'});
-    console.log(body)
     try{
         const results = await createAmmoItem(body)
         return Responses(200, {body: results})

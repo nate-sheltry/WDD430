@@ -19,9 +19,7 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
 
   function handleState(e:any){
     const value = e.target.value || e.target.getAttribute('data-category') || ' ';
-    console.log(value)
     const itemName = e.target.parentElement.className;
-    console.log(itemName)
     try{
       switch(true){
         case itemName.includes('name'):
@@ -50,7 +48,6 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
             const newArray = categories.filter(item => item != value);
             setCategories(newArray)
           }
-          console.log(categories)
           return
       }
     } catch(e:any){
@@ -71,7 +68,6 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
         img:ammoObj.data.img
       }
     }
-    console.log(ammo)
     fetch(`/api/resources/ammo/${ammoObj._id}/`, {
       method: 'PUT',
       headers:{
