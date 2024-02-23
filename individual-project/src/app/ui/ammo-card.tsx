@@ -5,10 +5,14 @@ import { incomingAmmo } from "@/app/lib/definitions"
 import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function AmmoCard({ammoObj}:{ammoObj:incomingAmmo}) {
   const router = useRouter()
   const [isContainerVisible, setIsContainerVisible] = useState(false);
 
+  
   const handleDatabaseButtonClick = () => {
     setIsContainerVisible(!isContainerVisible);
   };

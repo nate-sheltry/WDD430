@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
 
 export const metadata: Metadata = {
   title: "Search Data | Fallout PnP Project",

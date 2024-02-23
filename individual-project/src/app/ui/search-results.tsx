@@ -10,6 +10,9 @@ import { useEffect, useState } from "react";
 import { filterAmmo, filterArmor } from "../lib/actions";
 import { avoidCaching } from "../lib/common/cache-avoid";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function SearchResults({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
   const [Data, setData] = useState([])
   const [filteredData, setFilter] = useState([])

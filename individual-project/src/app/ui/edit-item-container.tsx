@@ -10,6 +10,9 @@ import { AmmoCardEdit } from "./ammo-card-edit";
 import { ArmorCardEdit } from "./armor-card-edit";
 import { avoidCaching } from "../lib/common/cache-avoid";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Boolean, armor:Boolean}) {
   const [Data, setData] = useState<incomingAmmo[]|incomingArmor[]>([])
   const [filteredData, setFilter] = useState([])

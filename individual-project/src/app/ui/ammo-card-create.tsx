@@ -6,6 +6,9 @@ import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
 import { avoidCaching } from "../lib/common/cache-avoid";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function AmmoCardCreate() {
 
   const router = useRouter()

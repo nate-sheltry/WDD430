@@ -11,6 +11,9 @@ import { AmmoCardEdit } from "./ammo-card-edit";
 import { AmmoCardCreate } from "./ammo-card-create";
 import { ArmorCardCreate } from "./armor-card-create";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function CreateItemContainer({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
 
   return (

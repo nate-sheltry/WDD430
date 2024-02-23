@@ -4,6 +4,9 @@ import { dtdr, incomingArmor, outgoingArmor } from "@/app/lib/definitions"
 import { useRouter } from "next/navigation";
 import { avoidCaching } from "../lib/common/cache-avoid";
 
+export const dynamic = 'force-dynamic'
+export const fetchCache = 'force-no-store'
+
 export function ArmorCardCreate() {
   const router = useRouter()
 
