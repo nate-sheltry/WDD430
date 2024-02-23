@@ -115,6 +115,7 @@ export function ArmorCardCreate() {
     fetch(`/api/resources/armor/create/${avoidCaching()}`, {
       method: 'POST',
       cache: 'no-store',
+      next: {revalidate: 0},
       headers:{
         'Content-type':'application/json'
       },
