@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,6 +21,7 @@
 
   --decorative-font:'Rubik Pixels', system-ui;
   --standard-font:'Roboto Mono', monospace;
+  --header-font:"Rubik", serif;
 
   --primary-color:#0b4c7e;
   --secondary-color:rgb(255,182,66);
@@ -37,6 +38,9 @@
 }
  body, p, div, span, input, button, section {
   font-family:var(--standard-font)
+ }
+ h1, h2, h3, h4, h5, h6 {
+  font-family:var(--header-font)
  }
 
 .decorative-font {
