@@ -64,7 +64,7 @@ export function LeftPanel() {
               </>
             )}
             {(!isModifyContainerVisible) &&
-            <button className="hover:bg-[var(--highlight2-color)] flex p-4 min-w-full justify-center"
+            <button className="hover:bg-[var(--third-color)] flex p-4 min-w-full justify-center"
               onClick={handleModifyDatabaseButtonClick}>
               <span>Modify Database</span>
             </button>}
