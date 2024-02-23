@@ -75,6 +75,7 @@ export function AmmoCardCreate() {
     }
     fetch(`/api/resources/ammo/create/${avoidCaching()}`, {
       method: 'POST',
+      cache: 'no-store',
       headers:{
         'Content-type':'application/json'
       },
