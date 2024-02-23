@@ -12,6 +12,7 @@ import { avoidCaching } from "../lib/common/cache-avoid";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
+export const revalidate = 1000;
 
 export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Boolean, armor:Boolean}) {
   const [Data, setData] = useState<incomingAmmo[]|incomingArmor[]>([])

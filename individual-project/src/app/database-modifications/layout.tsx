@@ -6,6 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
+export const revalidate = 1000;
 
 export const metadata: Metadata = {
   title: "Database Modifications | Fallout PnP Project",

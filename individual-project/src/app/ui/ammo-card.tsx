@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
+export const revalidate = 1000;
 
 export function AmmoCard({ammoObj}:{ammoObj:incomingAmmo}) {
   const router = useRouter()
