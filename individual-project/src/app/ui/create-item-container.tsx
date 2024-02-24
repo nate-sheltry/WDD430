@@ -13,7 +13,6 @@ import { ArmorCardCreate } from "./armor-card-create";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
-export const revalidate = 1000;
 
 export function CreateItemContainer({ammo, armor}:{ammo:Boolean, armor:Boolean}) {
 

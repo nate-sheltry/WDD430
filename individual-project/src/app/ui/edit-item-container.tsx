@@ -12,7 +12,6 @@ import { avoidCaching } from "../lib/common/cache-avoid";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
-export const revalidate = 1000;
 
 export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Boolean, armor:Boolean}) {
   const router = useRouter();
@@ -35,14 +34,14 @@ export function EditItemContainer({itemId, ammo, armor}:{itemId: string, ammo:Bo
 
   useEffect(() => {
     if(ammo){
-      fetch(`/api/resources/ammo/${itemId}/${avoidCaching()}`, {cache: 'no-store', next: {revalidate: 0}}).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/ammo/${itemId}/${avoidCaching()}`, {cache: 'no-store'}).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         setData(processedData)
         setFilter(processedData)
         setLoading(false)})
     }
     else if(armor){
-      fetch(`/api/resources/armor/${itemId}/${avoidCaching()}`, {cache: 'no-store', next: {revalidate: 0}}).then((res)=>res.json()).then((data)=>{
+      fetch(`/api/resources/armor/${itemId}/${avoidCaching()}`, {cache: 'no-store'}).then((res)=>res.json()).then((data)=>{
         let processedData = data;
         setData(processedData)
         setFilter(processedData)

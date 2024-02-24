@@ -1,7 +1,6 @@
-'use server'
-
 import { Responses } from "@/app/lib/common/responses"
 import { getAmmo } from "@/app/lib/database/get-actions"
+import { NextRequest, NextResponse } from "next/server"
 
 export async function GET(req:Request){
     if(req.method !== 'GET'){
@@ -9,11 +8,5 @@ export async function GET(req:Request){
     }
     const results = await getAmmo()
     console.log('Results from getting ammo')
-    return new Response(JSON.stringify(results),{
-        status:200,
-        statusText:'OK',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
+   return Responses(200, {body: results})
 }

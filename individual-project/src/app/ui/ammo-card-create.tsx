@@ -8,7 +8,6 @@ import { avoidCaching } from "../lib/common/cache-avoid";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
-export const revalidate = 1000;
 
 export function AmmoCardCreate() {
 
@@ -76,7 +75,6 @@ export function AmmoCardCreate() {
     fetch(`/api/resources/ammo/create/${avoidCaching()}`, {
       method: 'POST',
       cache: 'no-store',
-      next: {revalidate: 0},
       headers:{
         'Content-type':'application/json'
       },

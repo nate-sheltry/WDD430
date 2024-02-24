@@ -1,8 +1,10 @@
 'use server'
 import { MongoClient, ObjectId} from 'mongodb'
 import connectToDB from './connect'
+import { unstable_noStore as noStore } from 'next/cache';
 
 async function createDataPoint(databaseString: string, collectionString:string, data:any = {}){
+    noStore();
     try{
         const mongoClient = await connectToDB();
         if(!(mongoClient instanceof MongoClient)){
@@ -19,6 +21,7 @@ async function createDataPoint(databaseString: string, collectionString:string, 
 }
 
 async function modifyDataPoint(databaseString: string, collectionString:string, data:any, id:string){
+    noStore();
     try{
         const mongoClient = await connectToDB();
         if(!(mongoClient instanceof MongoClient)){

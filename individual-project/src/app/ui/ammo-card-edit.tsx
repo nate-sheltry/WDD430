@@ -8,7 +8,6 @@ import { avoidCaching } from "../lib/common/cache-avoid";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
-export const revalidate = 1000;
 
 export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
 
@@ -81,7 +80,7 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
       body: JSON.stringify(ammo)
     }).then(response => {if(response.status == 200){
       window.alert('Item was updated. The page will refresh.')
-      window.location.reload()
+      router.refresh()
       }
       else {
         response.json().then(body => {

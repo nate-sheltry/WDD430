@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 };
 
 export const fetchCache = 'force-no-store'
-export const revalidate = 1000;
 
 
 export default function RootLayout({

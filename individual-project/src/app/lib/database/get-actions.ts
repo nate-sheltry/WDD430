@@ -1,8 +1,10 @@
 'use server'
 import { MongoClient} from 'mongodb'
 import connectToDB from './connect'
+import { unstable_noStore as noStore } from 'next/cache';
 
 async function getData(databaseString: string, collectionString:string, search:any = {}){
+    noStore();
     try{
         const mongoClient = await connectToDB();
         if(!(mongoClient instanceof MongoClient)){
@@ -20,6 +22,7 @@ async function getData(databaseString: string, collectionString:string, search:a
 }
 
 async function getDataLimit(databaseString: string, collectionString:string, limit:number, search:any = {}){
+    noStore();
     try{
         const mongoClient = await connectToDB();
         if(!(mongoClient instanceof MongoClient)){
