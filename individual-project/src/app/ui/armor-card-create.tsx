@@ -134,8 +134,8 @@ export function ArmorCardCreate() {
   }
 
   return (
-    <div className="armor-card-edit relative text-black gap-[.6rem]
-        w-[17rem] min-h-[36rem] mb-[10rem] sm:w-[22rem] sm:min-h-[35rem]">
+    <div className="armor-card-edit relative tracking-[-.075em] text-black gap-[.6rem]
+        w-[19rem] max-w-[95%] min-h-[36rem] mb-[10rem] sm:w-[22rem] sm:min-h-[35rem]">
         <label className="name text-lg sm:text-xl font-semibold"><input type='string' onChange={handleState} className="data-value w-[98%]" value={name}/></label>
         <hr/>
         <div className="grid grid-cols-2 w-full">

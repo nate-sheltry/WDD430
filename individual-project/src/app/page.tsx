@@ -1,9 +1,10 @@
+"use server"
 import Image from "next/image";
 import { useState } from 'react';
 import { LeftPanelButton } from "./ui/left-panel-button";
 import { LeftPanel } from "./ui/left-panel";
 
-export default function Home() {
+export default async function Home() {
 
   return (
     <main className="flex max-h-screen flex-col items-center justify-between p-0 lg:ml-[10%] lg:mr-[10%] ">

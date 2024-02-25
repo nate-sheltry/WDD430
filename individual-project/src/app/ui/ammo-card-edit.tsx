@@ -91,7 +91,7 @@ export function AmmoCardEdit({ammoObj}:{ammoObj:incomingAmmo}) {
   }
 
   return (
-    <div className="bg-[var(--secondary-color)] text-black font-semibold relative text-md ammo-card-edit
+    <div className="bg-[var(--secondary-color)] tracking-[-.075em] text-black font-semibold relative text-md ammo-card-edit
     w-[19rem] min-h-[28.5rem] gap-[.6rem]">
         <label className="name text-lg sm:text-xl relative w-full">Name:<input type='text' className="data-value w-3/4 absolute right-0" value={name} onChange={handleState}/></label>
         <hr/>
