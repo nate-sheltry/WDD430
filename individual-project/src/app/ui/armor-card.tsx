@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { dtdr, incomingArmor } from "@/app/lib/definitions"
 import { useRouter } from "next/navigation";
+import { CopyButton } from "./copy-button";
 
 export function ArmorCard({armorObj}:{armorObj:incomingArmor}) {
   const router = useRouter()
@@ -18,7 +19,7 @@ export function ArmorCard({armorObj}:{armorObj:incomingArmor}) {
   }
 
   return (
-    <div className="armor-card relative sm:armor-card-sm text-black">
+    <div className="armor-card relative sm:armor-card-sm md:armor-card-md lg:armor-card-lg text-black">
         <label className="name text-lg sm:text-xl font-semibold">{armorObj.name}</label>
         <hr/>
         <div className="grid grid-cols-2 w-full">
@@ -57,6 +58,7 @@ export function ArmorCard({armorObj}:{armorObj:incomingArmor}) {
         text-white border-[1px] border-[var(--primary-color)] rounded-xl w-[7rem] bottom-2 left-[calc(50%-3rem)] shadow-black shadow-sm
         hover:bg-[var(--highlight2-color)] hover:text-black hover:font-semibold"
         onClick={handleEditArmor}>Edit Armor</button>
+        <CopyButton ammo={false} armor={true} obj={armorObj}/>
     </div>
   );
 }

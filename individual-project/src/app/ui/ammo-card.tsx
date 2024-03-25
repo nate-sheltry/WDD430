@@ -4,6 +4,7 @@ import Image from "next/image";
 import { incomingAmmo } from "@/app/lib/definitions"
 import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
+import { CopyButton } from "./copy-button";
 
 export const dynamic = 'force-dynamic'
 export const fetchCache = 'force-no-store'
@@ -49,6 +50,7 @@ export function AmmoCard({ammoObj}:{ammoObj:incomingAmmo}) {
         text-white border-[1px] border-[var(--primary-color)] rounded-xl w-[7rem] bottom-2 left-[calc(50%-3rem)] shadow-black shadow-sm
         hover:bg-[var(--highlight2-color)] hover:text-black hover:font-semibold"
         onClick={handleEditAmmo}>Edit Ammo</button>
+        <CopyButton ammo={true} armor={false} obj={ammoObj}/>
     </div>
   );
 }

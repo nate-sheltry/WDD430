@@ -26,7 +26,7 @@
 
 .armor-card{
     width:19rem;
-    height:25rem;
+    min-height:25rem;
 }
 .data-value {
     z-index:10;
@@ -69,7 +69,7 @@
         height:20rem;
     }
     .sm\:armor-card-sm{
-        width:20rem;
+        width:22.5rem;
         height:25rem;
     }
   }
@@ -79,9 +79,15 @@
   }
   
   @media (min-width: 1024px) {
-
+    .md\:armor-card-md{
+        width:22.5rem;
+        height:27rem;
+    }
   }
   
   @media (min-width: 1280px) {
-
+    .lg\:armor-card-lg{
+        width:22.5rem;
+        height:28rem;
+    }
   }
