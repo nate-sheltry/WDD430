@@ -1,7 +1,7 @@
 'use server'
 
 import { Responses } from "@/app/lib/common/responses"
-import { getArmor } from "@/app/lib/database/get-actions"
+import { getArmor } from "@/app/lib/database/actions"
 
 export async function GET(req:Request){
     if(req.method !== 'GET'){

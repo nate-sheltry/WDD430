@@ -23,7 +23,7 @@ export function ArmorCard({armorObj}:{armorObj:incomingArmor}) {
         <hr/>
         <div className="grid grid-cols-2 w-full">
           <label className="value w-full relative">Cost:<span className='data-value w-[60%] absolute right-0'>{armorObj.data.value}</span></label>
-          <label className="ac w-full relative">AC:<span className='data-value w-[70%] absolute right-0'>{armorObj.data.value}</span></label>
+          <label className="ac w-full relative">AC:<span className='data-value w-[70%] absolute right-0'>{armorObj.data.ac}</span></label>
         </div>
         <hr/>
         <div className="grid grid-cols-2 w-full">

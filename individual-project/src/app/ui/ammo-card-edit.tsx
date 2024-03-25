@@ -1,8 +1,6 @@
 'use client'
 import { useState } from "react";
-import Image from "next/image";
 import { AmmoCategory, incomingAmmo, outgoingAmmo } from "@/app/lib/definitions"
-import { getHost } from "../lib/common/get-host";
 import { useRouter } from "next/navigation";
 import { avoidCaching } from "../lib/common/cache-avoid";
 

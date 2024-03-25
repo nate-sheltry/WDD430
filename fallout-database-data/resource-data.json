@@ -1,0 +1,12 @@
+[
+    {
+        "name":"ammo-categories",
+        "data": [
+            "handguns",
+            "rifles",
+            "big guns",
+            "energy weapons",
+            "other"
+        ]
+    }
+]

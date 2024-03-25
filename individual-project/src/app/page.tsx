@@ -1,5 +1,4 @@
 "use server"
-import Image from "next/image";
 import { useState } from 'react';
 import { LeftPanelButton } from "./ui/left-panel-button";
 import { LeftPanel } from "./ui/left-panel";

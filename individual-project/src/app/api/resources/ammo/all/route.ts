@@ -1,5 +1,5 @@
 import { Responses } from "@/app/lib/common/responses"
-import { getAmmo } from "@/app/lib/database/get-actions"
+import { getAmmo } from "@/app/lib/database/actions"
 import { NextRequest, NextResponse } from "next/server"
 
 export async function GET(req:Request){

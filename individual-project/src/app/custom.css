@@ -28,6 +28,9 @@
     width:19rem;
     height:25rem;
 }
+.data-value {
+    z-index:10;
+}
 .armor-card :not(.otherBonuses) .data-value {
     text-align:right;
     padding-right:.5rem;
@@ -44,6 +47,7 @@
     border:.15rem solid var(--primary-color);
     padding-left:.25rem;
     padding-right:.25rem;
+    margin-bottom:.25rem;
     gap:1rem;
 }
 .category:hover{

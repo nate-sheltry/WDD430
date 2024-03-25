@@ -1,6 +1,5 @@
 import { Responses } from "@/app/lib/common/responses";
-import { getArmor } from "@/app/lib/database/get-actions";
-import { modifyArmorItem } from "@/app/lib/database/post-put-actions";
+import { getArmor, modifyArmorItem } from "@/app/lib/database/actions";
 import { outgoingArmor } from "@/app/lib/definitions";
 import { validateArmor } from "@/app/lib/validation";
 import { BSON, ObjectId } from 'mongodb';
